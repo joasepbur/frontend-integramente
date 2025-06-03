@@ -1,0 +1,111 @@
+<section class="appointment-page">
+  <div class="container">
+    <div class="page-header">
+      <h1>Agenda tu Cita</h1>
+      <p>Estamos comprometidos con tu bienestar emocional y aquí para ayudarte en tu proceso terapéutico.</p>
+    </div>
+
+    <div class="appointment-container">
+      <div class="appointment-info">
+        <h3>¿Cómo funciona?</h3>
+        <p>Agendar tu cita con nosotros es rápido y sencillo:</p>
+        <ul class="appointment-steps">
+          <li><span>1</span> Selecciona el tipo de terapia que necesitas</li>
+          <li><span>2</span> Elige entre sesión presencial o virtual</li>
+          <li><span>3</span> Selecciona la fecha y hora disponible</li>
+          <li><span>4</span> Completa tus datos personales</li>
+          <li><span>5</span> Confirma tu cita</li>
+        </ul>
+        <p class="appointment-note">* Recibirás un correo de confirmación con todos los detalles de tu cita.</p>
+        
+        <div class="appointment-types">
+          <h3>Tipos de terapia</h3>
+          <div class="therapy-type">
+            <h4>Terapia Individual</h4>
+            <p>Sesiones personalizadas para abordar tus necesidades específicas, enfocadas en tu desarrollo personal y bienestar emocional.</p>
+          </div>
+          <div class="therapy-type">
+            <h4>Terapia de Pareja</h4>
+            <p>Apoyo profesional para fortalecer la relación, mejorar la comunicación y superar desafíos juntos.</p>
+          </div>
+          <div class="therapy-type">
+            <h4>Terapia Familiar</h4>
+            <p>Orientación para mejorar las dinámicas familiares, resolución de conflictos y fortalecer los vínculos.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="appointment-form-container">
+        <form class="appointment-form">
+          <div class="form-group">
+            <label for="serviceType">Tipo de Servicio</label>
+            <select id="serviceType" name="serviceType" required>
+              <option value="" selected disabled>Selecciona un servicio</option>
+              <option value="individual">Terapia Individual</option>
+              <option value="couple">Terapia de Pareja</option>
+              <option value="family">Terapia Familiar</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Modalidad</label>
+            <div class="radio-group">
+              <div class="radio-option">
+                <input type="radio" id="modalityInPerson" name="modality" value="inPerson" checked>
+                <label for="modalityInPerson">Presencial</label>
+              </div>
+              <div class="radio-option">
+                <input type="radio" id="modalityOnline" name="modality" value="online">
+                <label for="modalityOnline">Online</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="appointmentDate">Fecha</label>
+            <input type="date" id="appointmentDate" name="appointmentDate" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="appointmentTime">Hora</label>
+            <select id="appointmentTime" name="appointmentTime" required>
+              <option value="" selected disabled>Selecciona una hora</option>
+              <option value="09:00">09:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">01:00 PM</option>
+              <option value="14:00">02:00 PM</option>
+              <option value="15:00">03:00 PM</option>
+              <option value="16:00">04:00 PM</option>
+              <option value="17:00">05:00 PM</option>
+              <option value="18:00">06:00 PM</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="fullName">Nombre Completo</label>
+            <input type="text" id="fullName" name="fullName" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="notes">Notas adicionales (opcional)</label>
+            <textarea id="notes" name="notes" rows="3"></textarea>
+          </div>
+          
+          <button type="submit" class="btn-primary btn-full">Agendar Cita</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,1 +1,178 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos globales para la aplicación Integramente */
+
+/* Variables globales */
+:root {
+  /* Paleta principal - inspirada en colores terapu00e9uticos para salud mental */
+  --primary-color: #5f8db0;        /* Azul sereno - transmite calma y confianza */
+  --secondary-color: #7eb8ad;      /* Verde-azulado - balance y armonía */
+  --accent-color: #a191bc;         /* Lavanda suave - introspección y bienestar */
+  --accent-warm: #e9b384;          /* Melocotón claro - calidez y cercanía */
+  
+  /* Colores neutros complementarios */
+  --neutral-light: #f2f2f0;        /* Blanco hueso - claridad mental */
+  --neutral-medium: #e4e0d7;       /* Beige claro - calma y espacio seguro */
+  --neutral-dark: #554e48;         /* Marrón oscuro - estabilidad y tierra */
+  
+  /* Colores de texto y fondos */
+  --text-color: #41403c;           /* Casi negro - legibilidad óptima */
+  --light-text: #ffffff;           /* Blanco puro para contrastar */
+  --background-color: #f7f7f5;     /* Blanco roto - menos estrés visual */
+  --section-bg: #ffffff;           /* Blanco para secciones */
+  --footer-bg: #3e4e59;            /* Azul oscuro profundo - profesional */
+  --footer-text: #c7d1d9;          /* Gris azulado claro - relajante */
+  
+  /* Elementos de UI */
+  --card-shadow: 0 4px 12px rgba(63, 81, 95, 0.08);
+  --hover-shadow: 0 8px 24px rgba(63, 81, 95, 0.12);
+  --border-radius: 8px;
+  --border-radius-lg: 12px;
+  
+  /* Espaciado */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  
+  /* Tipografía */
+  --font-family: 'Roboto', 'Segoe UI', sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
+  /* Transiciones */
+  --transition: all 0.3s ease;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Contenedores */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.section-title {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  padding-bottom: var(--spacing-md);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+/* Botones */
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: var(--primary-color);
+  font-weight: 600;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+}
+
+/* Espaciado de secciones */
+section {
+  padding: var(--spacing-xl) 0;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  section {
+    padding: var(--spacing-lg) 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}

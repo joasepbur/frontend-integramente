@@ -1,0 +1,12 @@
+/* Estilos para el componente principal */
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+  margin-top: 80px; /* Espacio para el header fijo */
+}
